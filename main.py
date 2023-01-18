@@ -27,6 +27,12 @@ time.sleep(0.6)
 print(Fore.CYAN+"discord.gg/giving")
 print(" ")
 print(" ")
+time.sleep(2)
+print(Fore.RED+"Loading...")
+time.sleep(1)
+print(Fore.GREEN+"Welcome To My Tool!!!")
+time.sleep(0.5)
+
 
 with open("config.txt", "r") as f:
     config = f.readlines()
@@ -55,3 +61,4 @@ while True:
         response.raise_for_status()
     except requests.exceptions.HTTPError as err:
         print(f"Error: {err}")
+input()
