@@ -1,6 +1,11 @@
+import colorama
 import requests
 import time
-print("""
+from colorama import Fore
+from colorama import init
+
+init()
+print(Fore.MAGENTA+"""
 ██████╗  ██████╗  ██████╗ ██████╗  ██████╗  ██████╗ 
 ██╔══██╗██╔═══██╗██╔════╝ ██╔══██╗██╔═══██╗██╔════╝ 
 ██████╔╝██║   ██║██║  ███╗██║  ██║██║   ██║██║  ███╗
@@ -15,11 +20,11 @@ time.sleep(0.6)
 
 
 
-print("Made With Love By pogdog_#1372")
+print(Fore.RED+"Made With Love By pogdog_#1372")
 time.sleep(0.6)
-print("Do what you will with the source code but don't make it malicious")
+print(Fore.BLUE+"Do what you will with the source code but don't make it malicious")
 time.sleep(0.6)
-print("discord.gg/giving")
+print(Fore.CYAN+"discord.gg/giving")
 print(" ")
 print(" ")
 
@@ -29,7 +34,7 @@ webhook_url = config[0].strip()
 webhook_name = config[1].strip()
 
 try:
-    response = requests.get(webhook_url)
+    response = requests.get(webhook_url, verify=False)
     response.raise_for_status()
     print("Webhook URL is valid.")
 except requests.exceptions.HTTPError as err:
